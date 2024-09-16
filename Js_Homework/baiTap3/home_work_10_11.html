@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="home_work_10_11.js"></script>
+    <link rel="stylesheet" href="home_work_10_11.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clothes</h1>
+        <form action="" name="frm">
+            <label for="name">
+                <span class="P">Product Name:</span>
+                <input type="text" id="name" name="name" />
+            </label>
+            <br>
+            <br>
+            <label for="quantity">
+                <span class="Q">Quantity:</span>
+                <input type="number" id="quantity" name="quantity" />
+            </label>
+            <br>
+            <br>
+            <label for="unitPrice">
+                <span class="U">Unit Price:</span>
+                <input type="number" id="unitPrice" name="unitPrice" />
+            </label>
+            <br>
+            <br>
+            <button type="button" onclick="sell()">Add</button>
+            <br>
+            <br>
+
+        </form>
+
+        <table id="tbl">
+            <!-- 
+            Chức năng:
+                    <th> dùng cho tiêu đề cột/hàng (đầu bảng), để mô tả dữ liệu.
+                    <td> dùng cho dữ liệu thông thường trong bảng.
+            Căn chỉnh:
+                    Nội dung của <th> mặc định căn giữa và in đậm.
+                    Nội dung của <td> mặc định căn trái.
+            -->
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+            <!-- Phải có lệnh này nếu không có thì total nó bị cộng lên trên -->
+            <tr>
+                <th colspan="4">Total</th>
+                <th id="total">0</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
